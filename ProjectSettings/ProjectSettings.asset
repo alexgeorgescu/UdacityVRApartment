@@ -141,7 +141,7 @@ PlayerSettings:
   targetPixelDensity: 0
   resolutionScalingMode: 0
   applicationIdentifier:
-    Android: com.Udacity.BuildAnApartment
+    Android: com.alexgeorgescu.course2project
     Standalone: com.Udacity.BuildAnApartment
     Tizen: com.MattSonic.Course2Project
     iOS: com.Udacity.BuildAnApartment
@@ -247,6 +247,7 @@ PlayerSettings:
     m_Enabled: 1
     m_Devices:
     - cardboard
+    - daydream
   - m_BuildTarget: Metro
     m_Enabled: 0
     m_Devices: []
