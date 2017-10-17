@@ -11,6 +11,7 @@ About 10 hours
 
 ### What I liked about the project
 Learned a lot about lighting
+Contextual clicks (spin cube if looking at it, teleporter otherwise)
 
 ### Greatest challenge 
 Get the project to work on both daydream and cardboard (I prefer daydream for my eyes, so don't use my cardboard much). Google VR SDK changes all the time!!!
