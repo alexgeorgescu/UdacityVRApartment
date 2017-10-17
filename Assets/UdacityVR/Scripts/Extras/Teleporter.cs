@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 /// <summary>
 /// The Teleporter class moves the player between a predetermined set of waypoints whenever the Cardboard button is pressed (or the screen touched).
@@ -36,11 +37,16 @@ public class Teleporter : MonoBehaviour
 	void Update ()
 	{
 		// If the player pressed the cardboard button (or touched the screen), then go to the next waypoint
-		if (Input.GetMouseButtonDown (0)) {
-			if (!shouldMoveToWaypoint) {
-				shouldMoveToWaypoint = true;
-			}
-			currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
+		if (GvrControllerInput.ClickButtonDown || Input.GetMouseButtonDown(0)) {
+            // minor modification to not teleport if interacting with an object
+            if (!EventSystem.current.IsPointerOverGameObject())
+            {
+                if (!shouldMoveToWaypoint)
+                {
+                    shouldMoveToWaypoint = true;
+                }
+                currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
+            }
 		}
 
 		// Smoothly move the player towards the active waypoint
