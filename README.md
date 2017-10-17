@@ -6,6 +6,8 @@ Unity Version: Unity 2017.1.0p4
 
 GVR Version: GVR Unity SDK v1.70.0
 
+I have built this project for Android
+
 ## Additional Information
 ### Time taken
 About 10 hours
